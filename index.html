@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Matthew Krause</title>
+	<meta name="author" content="Matthew Krause" />
+	<meta name="description" content="School Page for Matthew Krause" />
+	<meta name="keywords"  content="Matthew,Krause,UNC,Computer Science, CS" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="style/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="style/examples.css" />
+	<link rel="stylesheet" type="text/css" href="style/menu.css" />
+    <link rel="stylesheet" type="text/css" href="style/main.css" />
+
+    
+    
+	<style>
+        
+
+
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+		padding:0;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+		overflow: hidden;
+	}
+
+	#myVideo{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		top:0;
+		right:0;
+		width: 100%;
+		height: 100%;
+		background-size: 100% 100%;
+ 		background-color: black; /* in case the video doesn't fit the whole page*/
+  		background-image: /* our video */;
+  		background-position: center center;
+  		background-size: contain;
+   		object-fit: cover; /*cover video background */
+   		z-index:3;
+	}
+
+
+
+	/* Layer with position absolute in order to have it over the video
+	* --------------------------------------- */
+	#section0 .layer{
+		position: absolute;
+		z-index: 4;
+		width: 100%;
+		left: 0;
+		top: 43%;
+	}
+
+	/*solves problem with overflowing video in Mac with Chrome */
+	#section0{
+		overflow: hidden;
+	}
+
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+	</style>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+	<script type="text/javascript" src="js/examples.js"></script>
+    <script type="text/javascript" src="js/hashchange.js"></script>
+
+
+	<script type="text/javascript">
+         $(document).scroll(function() {
+             $('#menu').toggle($(this).scrollTop()>1000)
+        });
+        
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+                menu: '#menu',
+                css3: true,
+                scrollingSpeed: 1000,
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+				verticalCentered: true,
+				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#8AA3DD'],
+				afterRender: function(){
+					$('video').get(0).play();
+				}
+			});
+		});
+
+        
+        function clickO(){
+            document.getElementById("menu").style.paddingTop = "30%";
+            document.getElementById("menu").style.transition = ".9s";
+        }
+
+          $(function(){
+
+              $(window).hashchange( function(){
+                var ha = window.location.hash.substr(1);
+                if(ha == "firstPage"){
+                    document.getElementById("menu").style.paddingTop = "30%";
+                    document.getElementById("menu").style.transition = ".9s"; 
+                }else{
+                    document.getElementById("menu").style.paddingTop = "0%";
+                    document.getElementById("menu").style.transition = ".9s"
+                }
+              })
+
+              
+
+            });
+ 
+
+        
+	</script>
+
+</head>
+<body>
+
+
+<div id="fullpage">
+    
+	<div class="section " id="section0">
+		<video autoplay loop muted id="myVideo">
+			<source src="UNCFlight1.mp4" type="video/mp4">
+			<source src="UNCFlight1.webm" type="video/webm">
+		</video>
+		<div class="layer">
+			<h1>Matthew Krause</h1>
+
+                    <ul id="menu" class="mainMenu">
+                        <li id="menuBut" data-menuanchor="firstPage" class="active" onclick="clickO()"><a href="#firstPage">Home</a></li>
+                        <li id="menuBut" data-menuanchor="secondPage"><a href="#secondPage">About</a></li>
+                        <li id="menuBut" data-menuanchor="3rdPage"><a href="#3rdPage">Courses</a></li>
+                        <li id="menuBut" data-menuanchor="4thpage"><a href="#4thpage">Contact</a></li>
+                    </ul>
+
+		</div>
+	</div>
+    
+    <!-------------------- First Info Page -------------------->
+
+	<div class="section" id="section1" name="myAnchor">
+	    <div class="slide active" id="slide1"><h1>Summary</h1><br><br>
+        
+            <p class="conentPar">
+                I am a Junior at UNC Chapel Hill double majoring in Computer Science and Information Science.
+                <br><br>
+                Since I was born, I have been playing with computers, getting an feel for how my input would change what appeared on the screen and everything that happened in the back was magic (I am talking about the conditional styled charms that I would read about in Harry Potter). It wasn't until my first semester in college that I had touched any real code, finding out two things: first, some of my classmates had a much deeper understanding of programming, and second, I had a skill for learning how to program and learning many different languages.
+            </p>
+        </div>
+                
+        
+        
+        <div class="slide active" id="slide2"><h1>Acknowledgements</h1><br><br>
+        <p class="conentPar">I would like to give a special thank you to Jordan A. Nelson of <a href="http://nelsonaerialpros.com/"> Nelson Aerial Pros</a> for allowing me to use his aerial footage of UNC for my homepage.</p><br><br>
+            <p class="conentPar">This site was built using:  Ben Alman's Hash Changing JS plugin and FullPage JS plugin.</p>
+        </div>
+        
+
+	</div>
+    
+    <!-------------------- Second Info Page -------------------->
+	<div class="section" id="section2">
+        <div class="slide active" id="slide1"><h1><a class="classLink" href="comp283/index.html">COMP 283</a></h1></div>
+        <div class="slide active" id="slide2"><h1><a class="classLink" href="comp410/index.html">COMP 410</a></h1></div>
+        <div class="slide active" id="slide1"><h1><a class="classLink" href="comp411/index.html">COMP 411</a></h1></div>
+        <div class="slide active" id="slide2"><h1><a class="classLink" href="germ201/index.html">GERM 201</a></h1></div>
+        <div class="slide active" id="slide1"><h1><a class="classLink" href="inls161/index.html">INLS 161</a></h1></div>
+    </div>
+	
+    <!-------------------- Third Info Page -------------------->
+    <div class="section" id="section3">
+        <h1>Contact</h1>
+        <br><br>
+        <p><b>Email:</b> matt1123 [at] live [dot] unc [dot] edu</p>
+        <br>
+        <p><b><a href="Resume.pdf">Reusme</a></b></p>
+    </div>
+</div>
+
+</body>
+</html>

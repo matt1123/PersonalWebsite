@@ -1,0 +1,128 @@
+*{
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+box-sizing:border-box;
+}
+
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover; 
+}
+
+.homeHeader{
+	font-family: 'Raleway', sans-serif;
+	color:  #FFF;
+	text-align: center;
+    font-size: 70;
+/*	padding-top: 10%;*/
+}
+
+.monetPage{
+/*	background:url(monet.jpg);*/
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.conentPar{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.otherPage{
+    background: url(unc.jpg) no-repeat center center fixed;
+    -webkit-background-size: 100% auto;
+	-moz-background-size: 100% auto;
+	-ms-background-size: 100% auto;
+	-o-background-size: 100% auto;
+	background-size: 100% auto;
+}
+
+.conentWindow{
+    color: #FFF;
+    text-align: center;
+	font-family: 'Raleway', sans-serif;
+    
+}
+
+.pgMenu {
+    
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+    -ms-columns: 3;
+    -o-columns: 3;
+    list-style-type: none;
+    height: 150px;
+    width:100%;
+    position: relative;
+}
+
+.pgMenuItem{
+    border: none;
+    text-align: center;
+    width: 170px;
+    height: 50px;
+    color: white;
+    margin: 15px;
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+.pgMenuItem:hover{
+    border: 3px solid white;
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+.pgMenuA{
+    color:white;
+    text-decoration: none;
+	font-size:24px;
+    font-weight: bold;
+}
+
+.pgHead{
+    color:white;
+    text-align: center;
+}
+
+.classLink{
+    color: white;
+}
+
+.headerBar{
+	position:fixed;
+	top:0;
+	left:0;
+	height: 30px;
+    width: 100%;
+	z-index: 70;
+	width: 100%;
+	padding: 0;
+	margin:0;
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-top: 30%;
+    padding-bottom: 20%;
+}
+
+.headTxt{
+    margin-top: 5px;   
+}
