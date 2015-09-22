@@ -1,0 +1,7 @@
+AuthUserFile /afs/isis.unc.edu/home/m/a/matt1123/public_html/inls161/.htpasswd
+AuthGroupFile /dev/null
+AuthName Password
+AuthType Basic
+<limit GET>
+require user username
+</limit>

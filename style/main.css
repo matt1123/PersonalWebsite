@@ -126,3 +126,7 @@ video#bgvid {
 .headTxt{
     margin-top: 5px;   
 }
+
+.footNote{
+    font-size: 14px;
+}
